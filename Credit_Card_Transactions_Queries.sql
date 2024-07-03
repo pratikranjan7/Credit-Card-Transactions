@@ -140,7 +140,7 @@ on c1.exp_type = c2.exp_type
 
 WITH cte1 as(
 	SELECT card_type, exp_type, YEAR(transaction_date) yt, 
-    MONTH(transaction_date) mt, SUM(amount) as total_spend
+        MONTH(transaction_date) mt, SUM(amount) as total_spend
 	FROM credit_card_transcations
 	GROUP BY card_type, exp_type, YEAR(transaction_date), MONTH(transaction_date)
 ), 
